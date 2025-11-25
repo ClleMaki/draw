@@ -70,6 +70,51 @@
             margin: 40px auto;
             border-radius: 2px;
         }
+        /* Slider horizontal */
+        .tarot-slider {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+        }
+
+        .tarot-slider::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .tarot-slider::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        .tarot-slider::-webkit-scrollbar-track {
+            background: #ddd;
+        }
+
+        .tarot-slider .item {
+            flex: 0 0 auto;
+            width: 220px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            scroll-snap-align: start;
+            transition: transform 0.3s;
+        }
+
+        .tarot-slider .item:hover {
+            transform: scale(1.05);
+        }
+
+        .tarot-slider img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+
+
     </style>
 </head>
 
