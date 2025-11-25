@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background: #4a4aff;
+            color: white;
+            padding: 30px 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .gallery {
+            margin: 40px auto;
+            max-width: 900px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Petite animation CSS */
+        .item:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mon Portfolio</h1>
+        <p>Mes dessins ✏️ — Mes animations 🎞️ — Mes projets 💻</p>
+    </header>
+
+    <h2>Galerie</h2>
+    <div class="gallery">
+        <div class="item">
+            <img src="assets/dessin1.png" alt="Dessin 1">
+            <p>Dessin 1</p>
+        </div>
+
+        <div class="item">
+            <img src="assets/animation1.gif" alt="Animation 1">
+            <p>Animation GIF</p>
+        </div>
+
+        <div class="item">
+            <img src="assets/dessin2.jpg" alt="Dessin 2">
+            <p>Dessin 2</p>
+        </div>
+    </div>
+</body>
+</html>
