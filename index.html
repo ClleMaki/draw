@@ -66,7 +66,9 @@
             margin: 40px auto;
             border-radius: 2px;
         }
-        /* Slider horizontal */
+/* ===========================
+   Slider horizontal (Carrousel)
+   =========================== */
         .tarot-slider {
             display: flex;
             gap: 20px;
@@ -89,24 +91,50 @@
             background: #ddd;
         }
 
+/* ===========================
+   Item du carrousel
+   =========================== */
         .tarot-slider .item {
             flex: 0 0 auto;
-            width: 220px;
+            width: 220px;               /* largeur fixe des items */
             background: white;
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             scroll-snap-align: start;
-            transition: transform 0.3s;
+            overflow: hidden;           /* empêche le scale de dépasser */
+            transition: transform 0.3s; /* optionnel, si tu veux un scale sur l'item entier plus tard */
         }
 
-        .tarot-slider .item:hover {
-            transform: scale(1.05);
-        }
-
+/* ===========================
+   Image à l'intérieur de l'item
+   =========================== */
         .tarot-slider img {
-            width: 100%;
+            width: 100%;               /* remplit la largeur de l'item */
+            height: 150px;             /* hauteur fixe pour tous les items */
+            object-fit: cover;         /* garde le ratio sans déformer, recadre si nécessaire */
             border-radius: 10px;
+            transition: transform 0.3s; /* hover smooth */
+            display: block;
+        }
+
+/* ===========================
+   Hover effect sur l'image seulement
+   =========================== */
+        .tarot-slider .item:hover img {
+            transform: scale(1.05);    /* effet “zoom” au survol */
+        }
+
+/* ===========================
+   Responsive pour mobile
+   =========================== */
+        @media (max-width: 600px) {
+            .tarot-slider .item {
+                width: 160px;
+            }
+            .tarot-slider img {
+                 height: 120px;
+            }
         }
 
 
