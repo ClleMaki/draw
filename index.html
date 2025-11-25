@@ -111,15 +111,19 @@
    Image à l'intérieur de l'item
    =========================== */
         .tarot-slider img {
-            width: 100%;               /* remplit la largeur de l'item */
-            height: 150px;             /* hauteur fixe pour tous les items */
-            object-fit: cover;         /* garde le ratio sans déformer, recadre si nécessaire */
-            border-radius: 10px;
-            transition: transform 0.3s; /* hover smooth */
-            display: block;
+             width: 100%;       /* force l'image à remplir l'item */
+            height: 150px;     /* force une hauteur fixe */
+            object-fit: cover; /* recadre l'image */
         }
 
 
+
+        .tarot-slider .item.natural-size img {
+            width: auto;     /* largeur naturelle */
+            height: auto;    /* hauteur naturelle */
+            max-width: none; /* ignore les limites du slider */
+            object-fit: none; /* pas de recadrage */
+        }
 
 /* ===========================
    Hover effect sur l'image seulement
@@ -240,27 +244,28 @@
 <!-- SECTION ANIMATION -->
 <h2>Animations</h2>
 <div class="tarot-slider">
-    <div class="item">
+    <div class="item natural-size">
         <img src="assets/anim1.gif" alt="Animation 1">
         <p>Explosion 1</p>
     </div>
-    <div class="item">
+    <div class="item natural-size">
         <img src="assets/anim2.gif" alt="Animation 2">
         <p>Explosion 2</p>
     </div>
-    <div class="item">
+    <div class="item natural-size">
         <img src="assets/anim3.gif" alt="Animation 3">
         <p>Feu</p>
     </div>
-    <div class="item">
-        <img src="assets/anim4.gif" alt="Animation 4" style="width:600px !important; height:auto !important;">
+    <div class="item natural-size">
+        <img src="assets/anim4.gif" alt="Animation 4" style="width:auto !important; height:auto !important; object-fit:none !important;">
         <p>Marche quadripède</p>
     </div>
-    <div class="item">
+    <div class="item natural-size">
         <img src="assets/anim5.gif" alt="Animation 5">
         <p>Marche 2</p>
     </div>
 </div>
+
 
 <footer>
     © 2025 – Tous droits réservés. Dessins et animations par <strong>[Ton Nom]</strong>.  
