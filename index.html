@@ -22,9 +22,14 @@
             margin: 0;
         }
 
+        h2 {
+            margin-top: 60px;
+            color: #333;
+        }
+
         .gallery {
-            margin: 40px auto;
-            max-width: 900px;
+            margin: 30px auto;
+            max-width: 1000px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -37,6 +42,11 @@
             border-radius: 10px;
             width: 250px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
         }
 
         img {
@@ -44,39 +54,95 @@
             border-radius: 10px;
         }
 
-        /* Petite animation CSS */
-        .item:hover {
-            transform: scale(1.05);
-            transition: 0.3s;
+        footer {
+            margin-top: 60px;
+            padding: 20px;
+            background: #222;
+            color: #eee;
+            font-size: 14px;
+        }
+
+        /* Lignes de séparation */
+        .separator {
+            height: 2px;
+            width: 80%;
+            background: #ccc;
+            margin: 40px auto;
+            border-radius: 2px;
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1>Mon Portfolio</h1>
-        <p>Mes dessins ✏️ — Mes animations 🎞️ — Mes projets 💻</p>
-    </header>
 
-    <h2>Galerie</h2>
-    <div class="gallery">
-        <div class="item">
-            <img src="assets/dessin1.png" alt="Dessin 1">
-            <p>Dessin 1</p>
-        </div>
+<header>
+    <h1>Mon Portfolio</h1>
+    <p>Tarot ✦ Aquarelle ✦ Traditionnel ✦ Animation</p>
+</header>
 
-        <div class="item">
-            <img src="assets/animation1.gif" alt="Animation 1">
-            <p>Animation GIF</p>
-        </div>
-
-        <div class="item">
-            <img src="assets/dessin2.jpg" alt="Dessin 2">
-            <p>Dessin 2</p>
-        </div>
+<!-- SECTION TAROT -->
+<h2>Cartes de Tarot</h2>
+<div class="gallery">
+    <div class="item">
+        <img src="assets/tarot1.png" alt="Tarot 1">
+        <p>Tarot 1</p>
     </div>
+    <div class="item">
+        <img src="assets/tarot2.png" alt="Tarot 2">
+        <p>Tarot 2</p>
+    </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- SECTION AQUARELLE -->
+<h2>Aquarelle</h2>
+<div class="gallery">
+    <div class="item">
+        <img src="assets/aquarelle1.jpg" alt="Aquarelle 1">
+        <p>Aquarelle 1</p>
+    </div>
+    <div class="item">
+        <img src="assets/aquarelle2.jpg" alt="Aquarelle 2">
+        <p>Aquarelle 2</p>
+    </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- SECTION TRADITIONNEL -->
+<h2>Dessin Traditionnel</h2>
+<div class="gallery">
+    <div class="item">
+        <img src="assets/trad1.jpg" alt="Traditionnel 1">
+        <p>Traditionnel 1</p>
+    </div>
+    <div class="item">
+        <img src="assets/trad2.jpg" alt="Traditionnel 2">
+        <p>Traditionnel 2</p>
+    </div>
+</div>
+
+<div class="separator"></div>
+
+<!-- SECTION ANIMATION -->
+<h2>Animations</h2>
+<div class="gallery">
+    <div class="item">
+        <img src="assets/anim1.gif" alt="Animation 1">
+        <p>Animation 1</p>
+    </div>
+    <div class="item">
+        <img src="assets/anim2.gif" alt="Animation 2">
+        <p>Animation 2</p>
+    </div>
+</div>
+
 <footer>
-    © 2025 – Tous droits réservés. Dessins et animations par [Ton Nom].  
-    Non libres de droit. Toute utilisation nécessite mon autorisation.
+    © 2025 – Tous droits réservés. Dessins et animations par <strong>[Ton Nom]</strong>.  
+    Non libres de droit. Toute reproduction ou utilisation nécessite mon autorisation.
 </footer>
+
 </body>
 </html>
+
