@@ -77,9 +77,11 @@
             padding: 20px;
             scroll-snap-type: x mandatory;
             scrollbar-width: thin;
+            scroll-padding-left: 20px; /* force la marge visuelle à gauche */
+
         }
 
-        .tarot-slider > *:first-child {
+        .tarot-slider > :first-of-type { 
             margin-left: 20px; /* même valeur que la marge de droite */
         }
 
