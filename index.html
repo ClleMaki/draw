@@ -167,20 +167,28 @@
     
 
 <script>
-function openModal(src) {
-    document.getElementById("modal-img").src = src;
-    document.getElementById("modal").style.display = "flex";
-}
+document.addEventListener("DOMContentLoaded", function() {
 
-function closeModal() {
-    document.getElementById("modal").style.display = "none";
-}
+    function openModal(src) {
+        document.getElementById("modal-img").src = src;
+        document.getElementById("modal").style.display = "flex";
+    }
 
-// Fermer si on clique en dehors de la boîte
-document.getElementById("modal").addEventListener("click", function(e) {
-    if (e.target === this) closeModal();
+    function closeModal() {
+        document.getElementById("modal").style.display = "none";
+    }
+
+    // Ajouter les fonctions au global pour pouvoir les appeler via onclick HTML
+    window.openModal = openModal;
+    window.closeModal = closeModal;
+
+    // Fermer si on clique en dehors de la boîte
+    document.getElementById("modal").addEventListener("click", function(e) {
+        if (e.target === this) closeModal();
+    });
 });
 </script>
+
 
 
 
