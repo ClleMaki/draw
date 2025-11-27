@@ -67,9 +67,7 @@
             margin: 40px auto;
             border-radius: 2px;
         }
-/* ===========================
-   Slider horizontal (Carrousel)
-   =========================== */
+
         .tarot-slider {
             display: flex;
             gap: 20px;
@@ -77,73 +75,43 @@
             padding: 20px;
             scroll-snap-type: x mandatory;
             scrollbar-width: thin;
-            scroll-padding-left: 20px; /* force la marge visuelle à gauche */
-
+            scroll-padding-left: 20px;
         }
 
-        .tarot-slider > :first-of-type { 
-            margin-left: 20px; /* même valeur que la marge de droite */
+        .tarot-slider > :first-of-type {
+            margin-left: 20px;
         }
 
-        .tarot-slider::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .tarot-slider::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 10px;
-        }
-
-        .tarot-slider::-webkit-scrollbar-track {
-            background: #ddd;
-        }
-
-/* ===========================
-   Item du carrousel
-   =========================== */
+/* Pas de largeur fixe ici ! */
         .tarot-slider .item {
             flex: 0 0 auto;
-            height: 300px;               /* largeur fixe des items */
             background: white;
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             scroll-snap-align: start;
-            overflow: hidden;           /* empêche le scale de dépasser */
-            transition: transform 0.3s; /* optionnel, si tu veux un scale sur l'item entier plus tard */
+            overflow: hidden;
         }
 
-/* ===========================
-   Image à l'intérieur de l'item
-   =========================== */
+/* L’image détermine la largeur */
         .tarot-slider img {
-            width: 100%;       /* force l'image à remplir l'item */
-            height: 300px;     /* force une hauteur fixe */
-            object-fit: cover; /* recadre l'image */
+            height: 300px;      /* ← hauteur fixe */
+            width: auto;        /* ← largeur selon l’image */
+            object-fit: contain; /* ← ne coupe rien, respecte le ratio */
         }
 
-
-
-
-
-/* ===========================
-   Hover effect sur l'image seulement
-   =========================== */
+/* Hover */
         .tarot-slider .item:hover img {
-            transform: scale(1.05);    /* effet “zoom” au survol */
+            transform: scale(1.05);
         }
 
-/* ===========================
-   Responsive pour mobile
-   =========================== */
+        /* Mobile */
         @media (max-width: 600px) {
-            .tarot-slider .item {
-                width: 160px;
-            }
             .tarot-slider img {
-                 height: 120px;
-            }
-        }
+                height: 120px;
+    }
+}
+
 
 
 
